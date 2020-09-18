@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>checkPrimeNum</title>
+</head>
+<body>
+<p>
+    <label>Input Feet</label>
+    <input id="inputFeet" type="number" placeholder="Feet"
+           oninput="convertToMeter(this.value)">
+</p>
+<p>Meter <span id="result"></span></p>
+
+<script>
+    function convertToMeter(feetNum){
+        debugger
+        if(feetNum < 0){
+            document.getElementById("result").innerHTML = "not valid number, must input value >= 0";
+        } else {
+            var meterNum = feetNum * 0.3048;
+            document.getElementById("result").innerHTML = meterNum;
+        }
+
+    }
+</script>
+</body>
+
+</html>
